@@ -42,17 +42,22 @@ function createCard(brewDogArray) {
 /* 
 
 Unfortunately I had a struggle with the error handling at the index.html and details.html. 
-I tried to write functions, and execute them in the catch method, that would change the headings to a simple error message, but the code 
-in the catch block never seemed to be executed. I tried to create errors with the URLs and in the functions, 
-but the console gave me the same output regardless of what was written in the catch block of the API call. 
+I tried to write functions that would change the headings to a simple error message and execute 
+them in the catch method, but the code in the catch block never seemed to be executed. I tried 
+to create errors with the URLs and in the functions, but the console gave me the same output 
+regardless of what was written in the catch block of the API call. 
 
-Also struggled a bit with the single function length check, and could not find any obvious solution on 
-how to check for multiple values in a single function. 
+I also wanted to create a menu on top of the index page to toggle between pages as the API 
+only allowed for 80 outputs. I chose to present the first 50 beers, and didn´t have time to 
+finish this "side-project" as I spent my time trying to fix the other issues I had first. 
 
-On the contact page, the correct error message for the email input was displayed when empty/unvalid input, but this broke when I 
-added the displayMessage function to update the header element and had to call the structureCheck function. 
-It would have been solved by wrapping tha last if (contact.js line 99) in a function X and calling function X 
-in the if in the structurCheck function. This caused a "Maximum call stack error". 
+Also struggled a bit with the single function length check, and could not find any obvious 
+solution on how to check for multiple values in a single function. 
+
+On the contact page, the correct error message for the email input was displayed when empty/unvalid input, 
+but this broke when I added the displayMessage function to update the header element and had to call 
+the structureCheck function. It would have been solved by wrapping tha last if (contact.js line 99) 
+in a function X and calling function X in the if in the structurCheck function. This caused a "Maximum call stack error". 
 
 All in all this has been, by far, the most exciting course, can´t wait to do more Javascript!
 
