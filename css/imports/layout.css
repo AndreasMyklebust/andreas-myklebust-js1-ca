@@ -1,52 +1,71 @@
 html,
 body {
-    height: 100%;
+   height: 100%;
 }
 
 body {
-    background: #e8e8e8;
-    font-family: "Open Sans", sans-serif;
-    display: flex;
-    flex-direction: column;
+   background: #e8e8e8;
+   font-family: "Montserrat", sans-serif;
+   display: flex;
+   flex-direction: column;
 }
 
 .content {
-    flex: 1 0 auto;
+   flex: 1 0 auto;
 }
 
 footer {
-    flex-shrink: 0;
-    background-color: white;
-    text-align: center;
-    color: var(--footer) !important;
-    font-size: 12px;
-    padding: 1em 0;
+   flex-shrink: 0;
+   background-color: white;
+   text-align: center;
+   color: var(--footer) !important;
+   font-size: 12px;
+   padding: 1em 0;
 }
 
 h1 {
-    margin-bottom: 1em;
-    font-size: 1.6em;
+   margin-bottom: 1em;
+   font-size: 1.6em;
 }
 
 .container {
-    margin-top: 40px;
+   margin-top: 40px;
 }
 
 .results {
-    margin-top: 40px;
-    display: flex;
-    flex-flow: row wrap;
+   margin-top: 40px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
 
 .primary {
-    color: var(--primary-colour);
+   color: var(--primary-colour);
 }
 
 .bg-dark {
-    background-color: var(--grey) !important;
+   background-color: var(--grey) !important;
 }
 
 .about {
-    background: white;
-    padding: 1em;
+   background: white;
+   padding: 1em;
 }
+
+.beers {
+   display: grid;
+   grid-auto-flow: row;
+}
+.hidden {
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+   .results {
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+@media screen and (max-width: 480px) {
+   .card {
+      grid-auto-flow: row !important;
+   }
+ 

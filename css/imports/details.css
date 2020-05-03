@@ -1,41 +1,55 @@
 .breadcrumb-nav {
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid var(--light-grey);
+   margin-bottom: 1em;
+   padding-bottom: 0.5em;
+   border-bottom: 1px solid var(--light-grey);
 }
 
 .detail-details {
-    padding-top: 15px;
+   padding-top: 15px;
 }
 
 .detail-image {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    max-width: 300px;
-    align-self: self-start;
+   margin-left: 50%;
+   transform: translateX(-50%);
+   max-width: 300px;
+   align-self: self-start;
 }
 
 .value {
-    color: var(--primary-colour);
-    font-size: 20px;
-}
-
-@media (min-width: 600px) {
-    .detail-container {
-        display: flex;
-    }
-
-    .detail-image {
-        margin-left: 0;
-        transform: translateX(0);
-    }
-
-    .detail-details {
-        padding-top: 0;
-        padding-left: 15px;
-    }
+   color: var(--primary-colour);
+   font-size: 20px;
 }
 
 .hidden {
-    display: none;
+   display: none;
+}
+
+.detail-container {
+   display: grid;
+   grid-auto-flow: column;
+}
+.detailsDiv {
+   padding: 5rem;
+   margin: auto auto;
+}
+.detailsImage {
+   width: 15rem;
+   padding: 1.5rem;
+}
+.brewer {
+   font-style: italic;
+   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 780px) {
+   .detail-container {
+      grid-auto-flow: row;
+   }
+   .detailsName,
+   .detailsTagline {
+      text-align: center;
+   }
+   .detailsDiv {
+      padding: 0.5rem;
+   }
 }
